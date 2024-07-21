@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dani Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="dan.jpg" type="image/png">
+</head>
+<body>
+    <header>
+        <nav>
+            <button id="menu-toggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="nav-menu">
+                <li><a href="#home"><i class="fas fa-home"></i></a></li>
+                <li><a href="#about"><i class="fas fa-user"></i></a></li>
+                <li><a href="#projects"><i class="fas fa-briefcase"></i></a></li>
+                <li><a href="#skills"><i class="fas fa-cogs"></i></a></li>
+                <li><a href="#testimonials"><i class="fas fa-comments"></i></a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle Theme">
+                <i class="fas fa-sun" id="light-icon"></i>
+                <i class="fas fa-moon" id="dark-icon"></i>
+            </button>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="full-screen">
+            <div class="hero">
+                <img src="OIP.jpeg" alt="Hero Image">
+                <div class="hero-text">
+                    <h1>Hello, I'm Dani Maseya</h1>
+                    <p>I'm a Software Engineer. Explore my work and projects below.</p>
+                    <!-- Update this button to download CV -->
+                    <a href="dani_maseya_cv.pdf" class="btn" download>Download CV</a>
+                </div>
+            </div>
+            <footer class="home-footer">
+                <p>&copy; 2024 Dani Maseya. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://twitter.com/yourprofile" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/in/yourprofile" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/yourprofile" class="social-icon"><i class="fab fa-github"></i></a>
+                </div>
+            </footer>
+        </section>
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="mine.jpg" alt="Your Photo">
+                <p>Quick overview of your background, expertise, key skills, experience, and passions.</p>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <img src="project1.jpg" alt="Project 1">
+                    <div class="project-info">
+                        <h3>Project Title 1</h3>
+                        <p>Brief description of the project.</p>
+                        <a href="project1-details.html" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="project2.jpg" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Project Title 2</h3>
+                        <p>Brief description of the project.</p>
+                        <a href="project2-details.html" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="project3.jpg" alt="Project 3">
+                    <div class="project-info">
+                        <h3>Project Title 3</h3>
+                        <p>Brief description of the project.</p>
+                        <a href="project3-details.html" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Skills and Expertise</h2>
+            <div class="skills-list">
+                <div class="skill">
+                    <i class="icon-skill1"></i>
+                    <p>Skill 1</p>
+                </div>
+                <div class="skill">
+                    <i class="icon-skill2"></i>
+                    <p>Skill 2</p>
+                </div>
+                <div class="skill">
+                    <i class="icon-skill3"></i>
+                    <p>Skill 3</p>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonials-list">
+                <div class="testimonial">
+                    <p>"Great experience working with you!"</p>
+                    <p>- Client Name</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Outstanding work on the project!"</p>
+                    <p>- Client Name</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Ready to work together? Get in touch!</p>
+            <a href="#contact" class="btn">Contact Me</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dani Maseya. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://twitter.com/yourprofile" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourprofile" class="social-icon"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+    <script src="portfolio.js"></script>
+</body>
+</html>

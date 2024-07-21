@@ -1,0 +1,296 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --section-bg-color: #f4f4f4;
+    --link-color: #ff6347;
+}
+
+.dark-theme {
+    --background-color: #333333;
+    --text-color: #ffffff;
+    --section-bg-color: #444444;
+    --link-color: #ff6347;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none; /* Hide the menu toggle button by default */
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#theme-toggle i {
+    display: none;
+}
+
+#theme-toggle #light-icon {
+    display: block; /* Show the light icon by default */
+}
+
+body.dark-theme #theme-toggle #light-icon {
+    display: none;
+}
+
+body.dark-theme #theme-toggle #dark-icon {
+    display: block; /* Show the dark icon in dark mode */
+}
+
+#nav-menu.active {
+    display: block; /* Display the menu when active class is added */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px; /* Adjust margin-top to avoid overlap with fixed header */
+}
+
+.full-screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('OIP.jpeg') no-repeat center center/cover;
+    height: calc(100vh - 100px); /* Adjust height to subtract header and footer */
+}
+
+.hero-text {
+    text-align: center;
+    color: #fff;
+}
+
+.hero-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+}
+
+.hero-text .btn {
+    display: inline-block;
+    background: #ff6347;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.hero-text .btn:hover {
+    background: #e5533d;
+}
+
+section {
+    padding: 2rem;
+    background: var(--section-bg-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.about-content, .projects-grid, .skills-list, .testimonials-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.about-content img, .project img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.project, .skill, .testimonial {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.project-info {
+    margin-top: 1rem;
+}
+
+.project-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.project-info p {
+    margin-bottom: 1rem;
+}
+
+.project-info .btn {
+    display: inline-block;
+    background: #ff6347;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.project-info .btn:hover {
+    background: #e5533d;
+}
+
+.skill i {
+    font-size: 2rem; /* Adjust font size for skill icons */
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.social-icon:hover {
+    color: #ff6347;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none; /* Hide the menu by default */
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex; /* Show the menu when active class is added */
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-text .btn {
+        padding: 0.5rem 1rem;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        max-width: 100%;
+    }
+
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        max-width: 100%;
+    }
+
+    #menu-toggle {
+        display: block; /* Show the menu toggle button */
+    }
+}
